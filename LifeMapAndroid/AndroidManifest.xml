@@ -13,6 +13,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="LifeMapTab" >
+        </activity>
 		<activity android:name="FriendsActivity" >
         </activity>
         <activity android:name=".Tab2Activity">

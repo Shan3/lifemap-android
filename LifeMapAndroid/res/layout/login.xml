@@ -30,9 +30,15 @@
 
 
         </LinearLayout>
-        <Button android:text="Login" android:id="@+id/LoginButton"
-                android:nextFocusUp="@+id/RememberLoginBox" android:nextFocusDown="@+id/Username"
-                android:textSize="20sp" android:layout_width="fill_parent"
-                android:layout_height="wrap_content"></Button>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@+id/Username"
+            android:nextFocusUp="@+id/RememberLoginBox"
+            android:text="Login"
+            android:textSize="20sp" >
+</Button>
 
 </LinearLayout>
