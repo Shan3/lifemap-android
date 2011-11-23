@@ -1,8 +1,11 @@
 package lifemap.act;
 
 import clientserver.Client2Server;
+import database.DBAdapter;
+import dialogs.LoginDialog;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -19,6 +22,9 @@ public class MeActivity extends Activity{
 	TextView lblName = null;
 	
 	
+	DBAdapter dbAdp = null;
+	
+	
 	public void setTextResult(String str){
 		lblName.setText(str);
 	}
@@ -26,6 +32,11 @@ public class MeActivity extends Activity{
 	 public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        
+	        LoginDialog dagLogin = new LoginDialog(getApplicationContext());
+	        dagLogin.show();
+	        
+	        dbAdp = new DBAdapter(this);
+	       
 	        View vMain = View.inflate(this, R.layout.profile, null);
 	        
 	        setContentView(vMain);
@@ -45,17 +56,11 @@ public class MeActivity extends Activity{
 //	        	};
 //	        	t.start();
 	         
-	         
-	         
-	         
-	         
-	         
 //	         ProgressDialog dialog = ProgressDialog.show(this, "Loading", "Please wait...", false);
 //	         strResult = clnt2serv.getStringFromUrl();
 //	         lblName.setText(strResult);
 //	         dialog.dismiss();
 //	        
-	        
 	        
 //	        lblName.setText(strResult);
 //	        ImageButton btnAvatar = (ImageButton) findViewById(R.id.btnAvatar);
