@@ -2,7 +2,6 @@ package lifemap.act;
 
 import clientserver.Client2Server;
 import database.DBAdapter;
-import dialogs.LoginDialog;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -31,12 +30,7 @@ public class MeActivity extends Activity{
 	
 	 public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        
-	        LoginDialog dagLogin = new LoginDialog(getApplicationContext());
-	        dagLogin.show();
-	        
 	        dbAdp = new DBAdapter(this);
-	       
 	        View vMain = View.inflate(this, R.layout.profile, null);
 	        
 	        setContentView(vMain);
