@@ -1,5 +1,6 @@
 package lifemap.act;
 
+import dialogs.LoginDialog;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -12,6 +13,9 @@ public class LifeMap extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+
+        
         
         Resources res = getResources(); 
         TabHost tabHost = getTabHost();  
