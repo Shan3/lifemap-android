@@ -13,6 +13,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+		<activity android:name="FriendsActivity" >
+        </activity>
+        <activity android:name=".Tab2Activity">
+        </activity>
+        <activity android:name=".Tab3Activity">
+        </activity>
+        <activity android:name="MeActivity">
+        </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
