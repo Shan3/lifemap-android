@@ -32,49 +32,7 @@ import android.widget.TextView;
 
 public class Client2Server{
 	
-	Thread gameThread = null;
-	ProgressDialog dialog = null;
-	TextView txtName = null;
-	View view = null;
-	
-	MeActivity act ;
-	
-	public String getStringFromUrl(){
-//
-//		this.act = act;		
-//		
-//		this.dialog = dialog;
-//		this.txtName = txtName;
-//		this.view = view;
-//		gameThread = new Thread() {
-//			public void run() {
-			return 	threadMain();
-//			}
-//		};
-//		gameThread.start();
-		
-		
-//			
-//			Handler handler;
-//	
-//
-//			    Thread t =new Thread(){
-//			    public void run() {
-//			        handler.post(new Runnable() {
-//			            public void run() {
-//			                pc.setText("test");
-//			            }
-//			        });
-//			    }};
-//			    t.start();
-		
-		
-		
-		
-	}
-	
-	
-	private String threadMain(){
+	private String HowToUse(){
 		String strResult = "";
 		HashMap< String, String> params = new HashMap<String, String>();
 		params.put("id", "0");
@@ -89,15 +47,7 @@ public class Client2Server{
 				Log.e("log_tag", "Error parsing data " + e.toString());
 			}
 		}
-//		txtName.setText(strResult);
-//		dialog.dismiss();
-//		view.invalidate();
-		
-//		act.setTextResult(strResult);
-		Log.v("MyDebug","ket thuc");
-		
 		return strResult;
-		
 	}
 	
 
@@ -108,7 +58,7 @@ public class Client2Server{
 	 * @param params : tham so chuyen di vd name="Tran Van A" , age=20
 	 * @return JSONArray
 	 */
-	private JSONArray getJSONArray(String url,Map params){
+	public JSONArray getJSONArray(String url,Map params){
 		InputStream is = null;
 		String result = "";
 		// the params to send
