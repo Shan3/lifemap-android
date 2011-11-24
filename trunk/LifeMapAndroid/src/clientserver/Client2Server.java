@@ -89,7 +89,7 @@ public class Client2Server{
 				sb.append(line + "\n");
 			}
 			is.close();
-			result = sb.toString();
+			result = "["+sb.toString()+"]";
 		} catch (Exception e) {
 			Log.e("log_tag", "Error converting result " + e.toString());
 		}

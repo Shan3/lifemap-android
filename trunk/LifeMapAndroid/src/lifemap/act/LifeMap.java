@@ -1,5 +1,6 @@
 package lifemap.act;
 
+import model.MemberTable;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -19,6 +20,15 @@ public class LifeMap extends Activity {
         btnLogin.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
+				
+				
+				MemberTable tblMember = new MemberTable();
+				tblMember.getMember("", "");
+				
+				
+				
+				
+				
 				Intent iteTab = new Intent(LifeMap.this,LifeMapTab.class);
 				startActivity(iteTab);
 				finish();
