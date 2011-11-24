@@ -34,8 +34,6 @@ public class MemberTable {
 	}
 	
 	
-	
-	
 	private Member getMember(JSONArray jArray){
 		Member mem = null;
 		if (jArray!=null){
