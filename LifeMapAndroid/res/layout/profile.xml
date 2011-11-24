@@ -13,4 +13,5 @@
         android:textStyle="bold"
         />
     </LinearLayout>
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="btnLogout" android:id="@+id/btnLogout"></Button>
 </LinearLayout>

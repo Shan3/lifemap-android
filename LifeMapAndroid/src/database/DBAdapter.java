@@ -24,8 +24,7 @@ public class DBAdapter {
     private static final int DATABASE_VERSION = 2;
 
     private static final String DATABASE_CREATE =
-        "create table Member (_id integer primary key autoincrement, "
-        + "name text not null, email text not null);";
+        "create table Member (_id integer primary key autoincrement, name text not null, email text not null);";
         
     private final Context context;    
 
