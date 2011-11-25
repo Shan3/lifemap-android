@@ -2,9 +2,14 @@ package lifemap.act;
 
 import android.app.TabActivity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TextView;
+
+
 
 public class LifeMapTab extends TabActivity {
     /** Called when the activity is first created. */
@@ -12,38 +17,37 @@ public class LifeMapTab extends TabActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        Resources res = getResources(); 
-        TabHost tabHost = getTabHost();  
-        TabHost.TabSpec spec;  
-        Intent intent; 
-        
-     // Create an Intent to launch an Activity for the tab (to be reused)
-        intent = new Intent().setClass(this, FriendsActivity.class);
-        // Initialize a TabSpec for each tab and add it to the TabHost
-        spec = tabHost.newTabSpec("friends").setIndicator("Friends",
-                          res.getDrawable(R.drawable.tab_icon1))
-                      .setContent(intent);
-        tabHost.addTab(spec);
-        
-        intent = new Intent().setClass(this, Tab2Activity.class);
-        spec = tabHost.newTabSpec("tab2").setIndicator("Tab2",
-                          res.getDrawable(R.drawable.tab_icon2))
-                      .setContent(intent);
-        tabHost.addTab(spec);
-        
-        intent = new Intent().setClass(this, Tab3Activity.class);
-        spec = tabHost.newTabSpec("tab3").setIndicator("Tab3",
-                          res.getDrawable(R.drawable.tab_icon3))
-                      .setContent(intent);
-        tabHost.addTab(spec);
-        
-        intent = new Intent().setClass(this, MeActivity.class);
-        spec = tabHost.newTabSpec("Me").setIndicator("Me",
-                          res.getDrawable(R.drawable.tab_icon4))
-                      .setContent(intent);
-        tabHost.addTab(spec);
-        
-        tabHost.setCurrentTab(2);
-        
+        setTabs();
     }
+    
+    private void setTabs()
+	{
+		addTab("Friend", R.drawable.friend_tab, FriendsActivity.class);
+		addTab("Search", R.drawable.me_tab, Tab2Activity.class);
+		
+		
+		addTab("Search", R.drawable.me_tab, Tab3Activity.class);
+		addTab("Me", R.drawable.me_tab, MeActivity.class);
+	}
+    
+    private void addTab(String labelId, int drawableId, Class<?> c)
+	{
+		TabHost tabHost = getTabHost();
+		Intent intent = new Intent(this, c);
+		TabHost.TabSpec spec = tabHost.newTabSpec("tab" + labelId);	
+		
+		View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator, getTabWidget(), false);
+		TextView title = (TextView) tabIndicator.findViewById(R.id.title);
+		title.setText(labelId);
+		ImageView icon = (ImageView) tabIndicator.findViewById(R.id.icon);
+		icon.setImageResource(drawableId);
+
+		spec.setIndicator(tabIndicator);
+		spec.setContent(intent);
+		tabHost.addTab(spec);
+	}
+    
+    
+    
+    
 }

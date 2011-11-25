@@ -9,6 +9,7 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
         <EditText android:id="@+id/Username" android:nextFocusUp="@+id/LoginButton"
+        		style="@style/CodeFont"
                 android:nextFocusDown="@+id/Password" android:hint="Username"
                 android:inputType="textEmailSubject" android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
