@@ -42,7 +42,7 @@
   </class>  
   <class id="7" corner="BOTTOM_RIGHT" language="java" name="model.Member" project="LifeMapAndroid" 
     file="/LifeMapAndroid/src/model/Member.java" binary="false">    
-    <position x="785" y="310" width="-1" height="-1"/>    
+    <position x="663" y="277" width="-1" height="-1"/>    
     <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -64,14 +64,14 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <association>    
-    <end type="SOURCE" nodeId="2" navigable="false">      
-      <attribute name="clnt2serv"/>      
-      <multiplicity minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" nodeId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="storage.sharedpreferences.MemberStorage" 
+    project="LifeMapAndroid" file="/LifeMapAndroid/src/storage/sharedpreferences/MemberStorage.java" binary="false">    
+    <position x="812" y="347" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
   <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true"/>    
     <operations public="true" package="true" protected="true" private="true"/>  
