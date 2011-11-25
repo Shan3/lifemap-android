@@ -1,13 +1,20 @@
 package lifemap.act;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import model.Member;
 import storage.sharedpreferences.MemberStorage;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MeActivity extends Activity {
@@ -23,16 +30,28 @@ public class MeActivity extends Activity {
 		TextView lblName = (TextView) findViewById(R.id.lblName);
 		lblName.setText(mem.member_name);
 
-		
-
-		Button btnLogin = (Button) findViewById(R.id.btnLogout);
-		btnLogin.setOnClickListener(new OnClickListener() {
+		Button btnLogout = (Button) findViewById(R.id.btnLogout);
+		btnLogout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				logout();
 			}
 		});
 
+		ImageButton btnAvatar = (ImageButton) findViewById(R.id.btnAvatar);
+		URL url;
+		try {
+			url = new URL("http://lifemap.vn"+mem.imagePath);
+			InputStream is = (InputStream)url.getContent();
+			btnAvatar.setImageDrawable(Drawable.createFromStream(is , "src"));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 		// Thread t = new Thread() {
 		// public void run() {
 		// runOnUiThread(new Runnable() {

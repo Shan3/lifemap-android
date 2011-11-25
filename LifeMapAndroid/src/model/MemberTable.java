@@ -39,7 +39,7 @@ public class MemberTable {
 		if (jArray!=null){
 			try {
 				JSONObject json_data = jArray.getJSONObject(0);
-				mem = new Member(json_data.getInt("member_id"),json_data.getString("member_name"));
+				mem = new Member(json_data.getInt("member_id"),json_data.getString("member_name"),json_data.getString("imagePath"));
 				mem.imagePath = json_data.getString("imagePath");
 			} catch (JSONException e) {
 				Log.e("log_tag", "Error parsing data " + e.toString());
