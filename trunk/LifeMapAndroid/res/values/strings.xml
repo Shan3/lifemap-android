@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello World, LifeMap!</string>
     <string name="app_name">Life Map</string>
+    <string name="domain">http://lifemap.vn</string>
 </resources>

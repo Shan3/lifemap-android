@@ -41,7 +41,7 @@ public class MeActivity extends Activity {
 		ImageButton btnAvatar = (ImageButton) findViewById(R.id.btnAvatar);
 		URL url;
 		try {
-			url = new URL("http://lifemap.vn"+mem.imagePath);
+			url = new URL(R.string.domain + mem.imagePath);
 			InputStream is = (InputStream)url.getContent();
 			btnAvatar.setImageDrawable(Drawable.createFromStream(is , "src"));
 		} catch (MalformedURLException e) {
@@ -50,7 +50,14 @@ public class MeActivity extends Activity {
 			e.printStackTrace();
 		}
 		
-		
+		Button btnFriendsList = (Button) findViewById(R.id.btnFriendsList);
+		btnFriendsList.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intFriendsList = new Intent(MeActivity.this,FriendsListActivity.class);
+				startActivity(intFriendsList);
+			}
+		});
 		
 		// Thread t = new Thread() {
 		// public void run() {
