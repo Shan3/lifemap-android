@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Member;
+import model.MemberTable;
 
 import userinterface.components.MemberArrayAdapter;
 import android.app.Activity;
@@ -16,9 +17,9 @@ public class FriendsListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.friends_list);
 		
-		ArrayList<Member> members = new ArrayList<Member>();
-		
-		members.add(new Member(0, "Tran Van A", null));
+		MemberTable tabMember = new MemberTable();
+		int member_id = ((LifeMapApplication) getApplication() ).getMember().member_id;
+		List<Member> members = tabMember.getFriends(member_id);
 		
 		MemberArrayAdapter adapter = new MemberArrayAdapter(getApplicationContext(), R.layout.friends_listitem, members);
 		
