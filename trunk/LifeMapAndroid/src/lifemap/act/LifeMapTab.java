@@ -22,11 +22,9 @@ public class LifeMapTab extends TabActivity {
     
     private void setTabs()
 	{
-		addTab("Friend", R.drawable.friend_tab, FriendsActivity.class);
-		addTab("Search", R.drawable.me_tab, Tab2Activity.class);
-		
-		
-		addTab("Search", R.drawable.me_tab, Tab3Activity.class);
+		addTab("Friends", R.drawable.friend_tab, FriendsActivity.class);
+		addTab("Explorer", R.drawable.me_tab, ExplorerActivity.class);
+		addTab("Lists", R.drawable.me_tab, ListsActivity.class);
 		addTab("Me", R.drawable.me_tab, MeActivity.class);
 	}
     
