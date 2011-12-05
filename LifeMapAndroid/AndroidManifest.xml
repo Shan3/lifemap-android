@@ -17,9 +17,9 @@
         </activity>
 		<activity android:name="FriendsActivity" >
         </activity>
-        <activity android:name=".Tab2Activity">
+        <activity android:name=".ExplorerActivity">
         </activity>
-        <activity android:name=".Tab3Activity">
+        <activity android:name=".ListsActivity">
         </activity>
         <activity android:name="MeActivity">
         </activity>
