@@ -24,16 +24,16 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="4" corner="BOTTOM_RIGHT" language="java" name="lifemap.act.Tab2Activity" project="LifeMapAndroid" 
-    file="/LifeMapAndroid/src/lifemap/act/Tab2Activity.java" binary="false">    
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="lifemap.act.ExplorerActivity" project="LifeMapAndroid" 
+    file="/LifeMapAndroid/src/lifemap/act/ExplorerActivity.java" binary="false">    
     <position x="229" y="374" width="-1" height="-1"/>    
     <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="5" corner="BOTTOM_RIGHT" language="java" name="lifemap.act.Tab3Activity" project="LifeMapAndroid" 
-    file="/LifeMapAndroid/src/lifemap/act/Tab3Activity.java" binary="false">    
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="lifemap.act.ListsActivity" project="LifeMapAndroid" 
+    file="/LifeMapAndroid/src/lifemap/act/ListsActivity.java" binary="false">    
     <position x="365" y="374" width="-1" height="-1"/>    
     <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
