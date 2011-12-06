@@ -41,7 +41,7 @@ public class MeActivity extends Activity {
 		ImageButton btnAvatar = (ImageButton) findViewById(R.id.btnAvatar);
 		URL url;
 		try {
-			url = new URL(R.string.domain + mem.imagePath);
+			url = new URL( getString(R.string.domain) + mem.imagePath);
 			InputStream is = (InputStream)url.getContent();
 			btnAvatar.setImageDrawable(Drawable.createFromStream(is , "src"));
 		} catch (MalformedURLException e) {
