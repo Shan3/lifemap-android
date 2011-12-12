@@ -68,10 +68,10 @@ public class MemberTable {
 			
 			try {
 				if (jArray.getJSONObject(0).getBoolean("status")){
-					jArray = jArray.getJSONObject(1).getJSONArray("friendList");
+					jArray = jArray.getJSONObject(0).getJSONArray("friendList");
 					for (int i = 0; i < jArray.length(); i++) {
 						JSONObject json_data = jArray.getJSONObject(i);
-						Member mem = new Member(json_data.getInt("member_id"),json_data.getString("member_name"),json_data.getString("imagePath"));
+						Member mem = new Member(json_data.getInt("id"),json_data.getString("name"),json_data.getString("image"));
 						members.add(mem);
 					}
 				}
