@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<ImageView
+	    android:id="@+id/imgFile_img"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="left"
+	    android:src="@drawable/ic_launcher" />
+
+	<LinearLayout
+	    android:id="@+id/layCenter"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+
+		<TextView
+		    android:id="@+id/txtTitle"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.5"
+		    android:paddingLeft="10dip"
+		    android:text="HoangTonRestaurant" />
+
+		<TextView
+		    android:id="@+id/txtAddress"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0.5"
+		    android:text="61 Lý Thái Tổ, quận Hoàn Kiếm,Việt Nam" />
+
+	</LinearLayout>
+	<TextView
+		android:id="@+id/txtDistance"
+		android:text="distance"
+		android:layout_gravity="right"
+		android:paddingRight="10dip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+</LinearLayout>

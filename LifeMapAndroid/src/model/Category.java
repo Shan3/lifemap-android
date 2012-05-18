@@ -10,4 +10,6 @@ public class Category {
 		this.name = name;
 		this.icon = icon;
 	}
+	
+	
 }
