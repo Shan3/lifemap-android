@@ -28,7 +28,11 @@ public class MemberTable {
 		params.put("password", "3d217ef7dcca205e4bc1a08281d669d2");
 		return getMember(clnt2Srv.getJSONArray(url, params));
 	}
-	
+	/**
+	 * tra ve member theo id
+	 * @param member_id
+	 * @return
+	 */
 	public Member getMember(int member_id){
 		Client2Server clnt2Srv = new Client2Server();
 		String url = "http://lifemap.vn/web/api.php/member/getStatistic";
@@ -36,7 +40,6 @@ public class MemberTable {
 		params.put("member_id", String.valueOf(member_id));
 		return getMember(clnt2Srv.getJSONArray(url, params));
 	}
-	
 	
 	private Member getMember(JSONArray jArray){
 		Member mem = null;
@@ -51,7 +54,11 @@ public class MemberTable {
 		return mem;
 	}
 
-
+	/**
+	 * tra ve danh sach ban be cuar member co id = member_id
+	 * @param member_id
+	 * @return
+	 */
 	public List<Member> getFriends(int member_id){
 		Client2Server clnt2Srv = new Client2Server();
 		String url = "http://lifemap.vn/web/api.php/member/getFriends";

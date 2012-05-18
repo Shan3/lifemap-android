@@ -3,6 +3,7 @@ package lifemap.act;
 
 
 import storage.sharedpreferences.MemberStorage;
+import model.CafeTable;
 import model.Member;
 import model.MemberTable;
 import android.app.Activity;
@@ -25,6 +26,10 @@ public class LifeMap extends Activity {
         setContentView(R.layout.login);
         MemberStorage loginMng = new MemberStorage(this);
         mem = loginMng.getMember();
+        Log.v("MyDebug","mem = "+mem);
+        
+//        mem = new Member(123456, "phucT9", "");
+        
         if (mem==null){
 	        Button btnLogin = (Button)findViewById(R.id.btnLogin);
 	        btnLogin.setOnClickListener(new OnClickListener() {
@@ -45,6 +50,9 @@ public class LifeMap extends Activity {
     
     
     private void login(String username,String password){
+    	CafeTable tbCafe = new CafeTable();
+		tbCafe.getCafes();
+		
     	MemberTable tblMember = new MemberTable();
 		mem = tblMember.getMember(username, password);
 		if (mem!=null){
@@ -54,9 +62,6 @@ public class LifeMap extends Activity {
 			Intent iteTab = new Intent(LifeMap.this,LifeMapTab.class);
 			startActivity(iteTab);
 			finish();
-			
 		}
     }
-    
-    
 }

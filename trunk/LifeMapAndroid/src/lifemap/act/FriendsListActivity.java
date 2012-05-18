@@ -1,11 +1,9 @@
 package lifemap.act;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import model.Member;
 import model.MemberTable;
-
 import userinterface.components.MemberArrayAdapter;
 import android.app.Activity;
 import android.os.Bundle;
